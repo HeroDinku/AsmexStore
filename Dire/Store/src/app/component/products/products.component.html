@@ -1,0 +1,53 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+           <a >
+            <img style="width: 170px; margin-top: 7px;"  src="../../../assets/img/mymall.jpg" alt="">
+            <h6>All Products-ሁሉም ምርቶች</h6>
+           </a>
+        </div>
+
+        <div class="item">
+            <a >
+                <img style="width: 110px; margin-top: 7px;" src="../../../assets/img/apple-iphone-13-2.jpg" alt="">
+                <h6>Electronics-ኤሌክትሮኒክስ</h6>
+               </a>
+
+        </div>
+
+        <div class="item">
+            <a >
+                <img style="width: 170px; margin-top: 7px;" src="../../../assets/img/fashion.jpg" alt="">
+                <h6>Fashion-ፋሽን </h6>
+               </a>
+
+        </div>
+
+        <div class="item">
+            <a >
+                <img style="width: 170px; margin-top: 7px;" src="../../../assets/img/jewllery.jpg" alt="">
+                <h6>Jewllery-ጌጣጌጥ</h6>
+               </a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+     <div class="row">
+        <ng-container *ngFor= "let item of productsList">
+            <div class="card col-md-3">
+                <img src= {{item.image}} alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.description}}</p>
+                <p><strong>price</strong>${{item.price}}</p>
+                <button class="btn btn-warning"(click)= addtocart(item)> Add to cart </button>
+              </div>
+        </ng-container>
+       <nav></nav>
+
+
+    </div>
+
+</div>
